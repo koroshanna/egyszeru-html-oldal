@@ -16,3 +16,59 @@
     </script>
 </body>
 </html>
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Példa — JavaScript gomb</title>
+</head>
+<body>
+  <h1>JavaScript gomb példa</h1>
+
+  <p id="demo">Ez a bekezdés fog megváltozni, ha rákattintasz a gombra.</p>
+
+  <!-- W3Schools-stílusú egyszerű gomb -->
+  <button id="changeBtn" type="button">Kattints rám</button>
+
+  <script>
+    // Biztonságosabb megközelítés: eseménykezelő hozzáadása JavaScriptből
+    document.getElementById('changeBtn').addEventListener('click', function () {
+      document.getElementById('demo').textContent = 'A bekezdés megváltozott! (JavaScript működik)';
+    });
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Példa — JavaScript gomb</title>
+</head>
+<body>
+  <h1>JavaScript gomb példa</h1>
+  <p id="demo">Ez a bekezdés fog megváltozni.</p>
+  <button id="changeBtn" type="button">Kattints rám</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+document.getElementById('changeBtn').addEventListener('click', function () {
+  document.getElementById('demo').textContent = 'A bekezdés megváltozott! (külön .js fájlból)';
+});
+# 1. klónozás (ha még nincs a repo helyben)
+git clone <repo-url>
+cd <egyszeru-html-oldal>
+
+# 2. módosítások (másold be / szerkeszd az index.html vagy script.js fájlt)
+# pl. ha már a fájlok helyben vannak, lépj tovább
+
+# 3. állapot, hozzáadás, commit
+git add index.html script.js      # vagy csak a módosított fájlok
+git commit -m "Hozzáadva: JS gomb, ami módosít egy bekezdést (W3Schools példa alapján)"
+
+# 4. push
+git push origin <main>
+commit changes
+    
